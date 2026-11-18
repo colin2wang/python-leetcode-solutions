@@ -6,7 +6,7 @@ URL: https://leetcode.com/problems/${TITLE}/
 import pytest
 
 class Solution:
-    def ${TITLE_SNAKE}(self, s: str) -> str:
+    def ${TITLE_METHOD}(self, s: str) -> str:
         """
         T:  O(?)
         S:  O(?)
@@ -19,4 +19,4 @@ class Solution:
 ])
 def test_solutions(x, y, expected):
     sol = Solution()
-    assert sol.${TITLE_SNAKE}(x, y) == expected
+    assert sol.${TITLE_METHOD}(x, y) == expected

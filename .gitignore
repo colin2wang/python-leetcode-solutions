@@ -3,3 +3,11 @@
 .venv/
 
 playground.py
+
+# Tool caches
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+
+# AI Tools
+.atomcode/

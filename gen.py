@@ -47,11 +47,16 @@ def main():
     with open(TEMPLATE_FILE, encoding='utf-8') as f:
         tmpl = Template(f.read())
 
+    # camelCase method name: first word as-is, following words capitalized
+    words = title.split('-')
+    method = words[0] + ''.join(w.capitalize() for w in words[1:])
+
     content = tmpl.safe_substitute(
         NUMBER=num,
         TITLE=title,
         TITLE_SNAKE=title.replace('-', '_'),
-        TITLE_CAMEL=' '.join(w.capitalize() for w in title.split('-'))
+        TITLE_CAMEL=' '.join(w.capitalize() for w in words),
+        TITLE_METHOD=method,
     )
 
     if os.path.exists(filename):

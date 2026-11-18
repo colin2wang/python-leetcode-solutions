@@ -138,7 +138,7 @@ wheels = [
 ]
 
 [[package]]
-name = "python-uv-leetcode"
+name = "python-leetcode-solutions"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
